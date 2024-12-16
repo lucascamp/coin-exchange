@@ -16,8 +16,24 @@ class UserSeeder extends Seeder
     {
         if(!User::where('email', 'lucas@test.com')->first()) {
             $superAdmin = User::create([
-                'name' => 'Lucas',
+                'name' => 'Lucas Campos',
                 'email' => 'lucas@test.com',
+                'password' => Hash::make('123456', ['rounds' => '12'])
+            ]);
+        }
+
+        if(!User::where('email', 'leonardo@test.com')->first()) {
+            $superAdmin = User::create([
+                'name' => 'Leonardo Boquinha',
+                'email' => 'leonardo@test.com',
+                'password' => Hash::make('123456', ['rounds' => '12'])
+            ]);
+        }
+
+        if(!User::where('email', 'jose@test.com')->first()) {
+            $superAdmin = User::create([
+                'name' => 'Jose da silva',
+                'email' => 'jose@test.com',
                 'password' => Hash::make('123456', ['rounds' => '12'])
             ]);
         }
